@@ -175,13 +175,6 @@ def update_order_view(request,pk):
     return render(request,'ecom/update_order.html',{'orderForm':orderForm})
 
 
-# admin view the feedback
-@login_required(login_url='adminlogin')
-def view_feedback_view(request):
-    feedbacks=models.Feedback.objects.all().order_by('-id')
-    return render(request,'ecom/view_feedback.html',{'feedbacks':feedbacks})
-
-
 
 
 #---------------------------------------------------------------------------------
